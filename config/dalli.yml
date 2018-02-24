@@ -1,0 +1,12 @@
+default: &default
+  namespace: some_namespace
+  host: ['localhost']
+
+development:
+  <<: *default
+
+production:
+  <<: *default
+
+test:
+  <<: *default

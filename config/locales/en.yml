@@ -1,0 +1,32 @@
+en:
+  hello: "Hello world"
+  errors:
+    authentication_failure: "Authentication Failure: Invalid credentials"
+    not_activated_or_disabled: "Account not activated. Please activate your account."
+    forbidden: "Access Denied"
+    unauthorised_access: "Unauthorised Access"
+    not_found: "Record not found"
+    role_already_exist: "Role already exists"
+    role_not_exist: "Role does not exists"
+    param_missing: "Missing required parameter."
+    required_param_missing: "Required parameter '%{name}' is/are missing."
+    invalid_param_values: "Invalid value for %{param_name}. Permitted values - %{valid_values}"
+    cant_be_blank: "can't be blank"
+    is_too_long: "is too long (maximum is #{max_length} characters)"
+    invalid_user_ids:
+      one: "User ID is invalid"
+      other: "User IDs are invalid"
+    invalid_status: "Invalid Status"
+  views:
+    users:
+      email_token_does_not_match: "The email or token does not match."
+      account_already_activated: "The account is already activated or user with %{email} is not found."
+    role:
+      create: "create"
+      destroy: "destroy"
+  mailer:
+    user_mailer:
+      activation:
+        subject: "Account Activation"
+      password_reset:
+        subject: "Password Reset"

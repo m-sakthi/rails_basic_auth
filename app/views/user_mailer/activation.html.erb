@@ -1,0 +1,8 @@
+<h1><%= AppSettings[:application_name] %></h1>
+
+<p>Hi <%= @user.first_name %>,</p>
+
+<p> Welcome to <%= AppSettings[:application_name] %>! </p>
+<p> Click on the link below to activate your account: </p>
+
+<%= link_to "Activate", @url %>

@@ -1,0 +1,8 @@
+<%= AppSettings[:application_name] %>
+
+Hi <%= @user.first_name %>,
+
+Welcome to <%= AppSettings[:application_name] %>! 
+Click on the link below to activate your account:
+
+<%= link_to "Activate", @url %>

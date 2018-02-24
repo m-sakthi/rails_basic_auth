@@ -1,0 +1,44 @@
+## Environment settings
+# change this file as per your app requirement
+defaults: &defaults
+  application_name: AppName
+  support_email: 'admin@app.com'
+  asset_host:
+    enabled: false
+    web_url: http://localhost:3000
+    url: http://localhost:3000
+
+  authentication:
+    key_based: true
+    account_activation_via_web: false
+    activation_path: '/api/v1/users/account_activation/'
+    password_reset_path: '/api/v1/users/password_reset/'
+    session_expiry: 86400 # in seconds
+    nonce: 'nonce' # ex: app_name
+
+dev_defaults: &dev_defaults
+  <<: *defaults
+  host: localhost
+  port: 3000  # used by the swagger to generate json files
+  protocol: http
+  relative_url_root: /
+
+prod_defaults: &prod_defaults
+  <<: *defaults
+  asset_host:
+    enabled: false
+    web_url: http://appname.com
+    url: https://appname-api.com
+  host: apphost
+  port: 443 # usually runs on 443
+  protocol: https
+  relative_url_root: /
+
+development:
+  <<: *dev_defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *prod_defaults

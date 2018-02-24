@@ -1,0 +1,31 @@
+defaults: &defaults
+  host_with_port: 'localhost:3000'
+  protocol: 'http'
+  smtp:
+    enabled: true
+    settings:
+      address: 'smtp.some_domain.net'
+      port: '587'
+
+prod_defaults: &prod_defaults
+  host_with_port: 'apphostname.com:443'
+  protocol: 'https'
+  smtp:
+    enabled: true
+    settings:
+      address: 'smtp.some_domain.net'   # SMTP Address
+      port: '587'
+      authentication: 'plain'
+      user_name: ENV['SMTP_MAILER_USERNAME']  # SMTP password
+      password: ENV['SMTP_MAILER_PASSWORD']  # SMTP password
+      domain: 'smtp_domain.com'  # SMTP domain
+      enable_starttls_auto: true
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *prod_defaults
