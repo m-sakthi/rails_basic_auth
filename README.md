@@ -31,7 +31,7 @@ Once you are done with the settings do the following,
 * create database with `rails db:create`
 * generate swagger json files with `rails swagger:docs`
 * start the server with `rails s`
-* navigate to `localhost:3000` to see the swagger documentation
+* navigate to `http://localhost:3000` to see the swagger documentation
 
 ## Upcoming
 
